@@ -1,0 +1,228 @@
+{
+  "classifications": [
+    {
+      "id": "F001",
+      "theme": "onboarding_setup",
+      "evidence_quote": "We could not finish account setup because the invitation link expired before our admin used it."
+    },
+    {
+      "id": "F002",
+      "theme": "onboarding_setup",
+      "evidence_quote": "The setup checklist doesn’t explain whether workspace creation comes before importing team members."
+    },
+    {
+      "id": "F003",
+      "theme": "onboarding_setup",
+      "evidence_quote": "Our first-time admin needed three separate calls to understand how roles and permissions work during setup."
+    },
+    {
+      "id": "F004",
+      "theme": "onboarding_setup",
+      "evidence_quote": "I signed up yesterday but the welcome screen never tells me what to do next."
+    },
+    {
+      "id": "F005",
+      "theme": "onboarding_setup",
+      "evidence_quote": "The setup wizard resets after step two and I have to reenter the same company settings."
+    },
+    {
+      "id": "F006",
+      "theme": "notification_noise",
+      "evidence_quote": "Every assignment update sends an email and a push notification. It is impossible to focus."
+    },
+    {
+      "id": "F007",
+      "theme": "notification_noise",
+      "evidence_quote": "We need one daily digest instead of five near-identical activity alerts per team."
+    },
+    {
+      "id": "F008",
+      "theme": "notification_noise",
+      "evidence_quote": "Managers cannot mute low-priority reminders, so they are ignoring all notifications."
+    },
+    {
+      "id": "F009",
+      "theme": "notification_noise",
+      "evidence_quote": "Please let me choose push only or email only. I do not need both for every event."
+    },
+    {
+      "id": "F010",
+      "theme": "notification_noise",
+      "evidence_quote": "The product continues emailing resolved-ticket reminders a day after completion."
+    },
+    {
+      "id": "F011",
+      "theme": "reporting_visibility",
+      "evidence_quote": "I can see total tickets but can’t find a breakdown by issue category in the analytics screen."
+    },
+    {
+      "id": "F012",
+      "theme": "reporting_visibility",
+      "evidence_quote": "The weekly report is buried behind three menus and the export button is hard to discover."
+    },
+    {
+      "id": "F013",
+      "theme": "reporting_visibility",
+      "evidence_quote": "Our team leaders need to filter dashboard results by region, not only by company-wide totals."
+    },
+    {
+      "id": "F014",
+      "theme": "reporting_visibility",
+      "evidence_quote": "I wish charts explained what the trends mean; right now the dashboard is confusing."
+    },
+    {
+      "id": "F015",
+      "theme": "reporting_visibility",
+      "evidence_quote": "We need to compare first-response times across teams without manually combining several reports."
+    },
+    {
+      "id": "F016",
+      "theme": "billing_confusion",
+      "evidence_quote": "Our invoice shows an add-on we did not recognize and I cannot find the price breakdown."
+    },
+    {
+      "id": "F017",
+      "theme": "billing_confusion",
+      "evidence_quote": "The renewal notification never explains how our seat count affects the next bill."
+    },
+    {
+      "id": "F018",
+      "theme": "billing_confusion",
+      "evidence_quote": "The pricing page lists two plans but fails to explain the overage charges."
+    },
+    {
+      "id": "F019",
+      "theme": "billing_confusion",
+      "evidence_quote": "Why did the trial convert to a paid plan? The notice should show the charge before renewal."
+    },
+    {
+      "id": "F020",
+      "theme": "billing_confusion",
+      "evidence_quote": "I need to see taxes and discounts separately when downloading invoices."
+    },
+    {
+      "id": "F021",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM contacts added yesterday are still missing in the support tool even though sync shows success."
+    },
+    {
+      "id": "F022",
+      "theme": "integration_sync",
+      "evidence_quote": "Our CRM integration duplicates accounts every time we reconnect it."
+    },
+    {
+      "id": "F023",
+      "theme": "integration_sync",
+      "evidence_quote": "Calendar appointments have stopped syncing and there is no error shown anywhere."
+    },
+    {
+      "id": "F024",
+      "theme": "integration_sync",
+      "evidence_quote": "Data from our CRM arrives with yesterday’s owner assignments."
+    },
+    {
+      "id": "F025",
+      "theme": "integration_sync",
+      "evidence_quote": "The API integration keeps failing intermittently with no actionable retry message."
+    },
+    {
+      "id": "F026",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "On my phone, the Save button sits below the screen edge, so I cannot submit a reply."
+    },
+    {
+      "id": "F027",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "The mobile text is too small for our field staff to read without zooming."
+    },
+    {
+      "id": "F028",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "Our agents using screen readers cannot tell which field is required on the mobile form."
+    },
+    {
+      "id": "F029",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "The mobile ticket list freezes when I turn on large text in accessibility settings."
+    },
+    {
+      "id": "F030",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "Keyboard navigation through the mobile web form skips the attachment button entirely."
+    }
+  ],
+  "insights": [
+    {
+      "theme": "onboarding_setup",
+      "summary": "All five onboarding comments point to friction in reaching a successful first setup: unclear sequencing and next steps, insufficient role guidance, expiring invitations, and lost progress. The wizard reset and invitation expiry are direct completion blockers.",
+      "feedback_ids": [
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005"
+      ],
+      "pm_recommendation": "Prioritize setup reliability first: preserve progress and entered settings across sessions, and make invitations renewable or configurable. Then add a guided, ordered checklist with contextual role/permission explanations and a clear next action on the welcome screen. Instrument setup-step completion and abandonment to measure impact."
+    },
+    {
+      "theme": "notification_noise",
+      "summary": "Customers describe excessive, duplicated, low-priority, and stale alerts across email and push. The result is reduced focus and notification fatigue severe enough that managers ignore all notifications.",
+      "feedback_ids": [
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010"
+      ],
+      "pm_recommendation": "Build notification preferences by event type and channel, including email-only/push-only controls, priority muting, and configurable digests. Suppress reminders immediately when a ticket is resolved and deduplicate equivalent events. Track notification opt-outs, mute rates, and engagement with actionable alerts."
+    },
+    {
+      "theme": "reporting_visibility",
+      "summary": "Users can access headline totals but lack useful segmentation and comparison, while report discovery and chart interpretation are weak. This limits the dashboard’s value for operational decisions.",
+      "feedback_ids": [
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015"
+      ],
+      "pm_recommendation": "Improve core analytical workflows with issue-category and region filters plus side-by-side team comparisons for first-response time. Make weekly reports and exports easier to find, and add concise chart labels or contextual explanations. Validate with task-based usability tests and measure report/export usage."
+    },
+    {
+      "theme": "billing_confusion",
+      "summary": "Billing feedback consistently signals low price transparency before and after purchase: unclear add-ons, seat-based renewal impact, overage rules, trial conversion charges, and invoice line items.",
+      "feedback_ids": [
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020"
+      ],
+      "pm_recommendation": "Create a consistent billing breakdown across pricing, renewal notices, and invoices. Show add-on names and costs, seat-count assumptions, overage rates, taxes, discounts, and the expected renewal charge before conversion or renewal. Add a pre-renewal cost preview and test whether billing-related support contacts decline."
+    },
+    {
+      "theme": "integration_sync",
+      "summary": "Integration trust is undermined by missing or stale records despite apparent success, duplicate accounts after reconnects, silent calendar failures, and intermittent API errors without recovery guidance.",
+      "feedback_ids": [
+        "F021",
+        "F022",
+        "F023",
+        "F024",
+        "F025"
+      ],
+      "pm_recommendation": "Make sync status reflect verified outcomes rather than job completion alone. Add record-level sync timestamps and error details, idempotent reconnect behavior to prevent duplicates, stale-data detection, and actionable retry/recovery controls. Monitor sync latency, failure rate, duplicate creation, and time to recovery."
+    },
+    {
+      "theme": "mobile_accessibility",
+      "summary": "Mobile workflows have both responsive-layout defects and accessibility barriers: controls fall off-screen, text is difficult to read, required fields are not announced, large-text settings cause freezes, and keyboard focus skips controls.",
+      "feedback_ids": [
+        "F026",
+        "F027",
+        "F028",
+        "F029",
+        "F030"
+      ],
+      "pm_recommendation": "Treat mobile accessibility as a release-quality requirement. Fix viewport and responsive control placement, support text scaling without freezing, expose programmatic required-field labels and errors for screen readers, and repair keyboard focus order. Add automated accessibility checks and manual testing across screen sizes, screen readers, large-text settings, and keyboard-only use."
+    }
+  ]
+}

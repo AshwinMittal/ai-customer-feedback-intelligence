@@ -1,0 +1,228 @@
+{
+  "classifications": [
+    {
+      "id": "F001",
+      "theme": "onboarding_setup",
+      "evidence_quote": "invitation link expired before our admin used it"
+    },
+    {
+      "id": "F002",
+      "theme": "onboarding_setup",
+      "evidence_quote": "doesn’t explain whether workspace creation comes before importing team members"
+    },
+    {
+      "id": "F003",
+      "theme": "onboarding_setup",
+      "evidence_quote": "needed three separate calls to understand how roles and permissions work during setup"
+    },
+    {
+      "id": "F004",
+      "theme": "onboarding_setup",
+      "evidence_quote": "the welcome screen never tells me what to do next"
+    },
+    {
+      "id": "F005",
+      "theme": "onboarding_setup",
+      "evidence_quote": "The setup wizard resets after step two"
+    },
+    {
+      "id": "F006",
+      "theme": "notification_noise",
+      "evidence_quote": "Every assignment update sends an email and a push notification"
+    },
+    {
+      "id": "F007",
+      "theme": "notification_noise",
+      "evidence_quote": "one daily digest instead of five near-identical activity alerts per team"
+    },
+    {
+      "id": "F008",
+      "theme": "notification_noise",
+      "evidence_quote": "cannot mute low-priority reminders"
+    },
+    {
+      "id": "F009",
+      "theme": "notification_noise",
+      "evidence_quote": "choose push only or email only"
+    },
+    {
+      "id": "F010",
+      "theme": "notification_noise",
+      "evidence_quote": "emailing resolved-ticket reminders a day after completion"
+    },
+    {
+      "id": "F011",
+      "theme": "reporting_visibility",
+      "evidence_quote": "can’t find a breakdown by issue category in the analytics screen"
+    },
+    {
+      "id": "F012",
+      "theme": "reporting_visibility",
+      "evidence_quote": "The weekly report is buried behind three menus"
+    },
+    {
+      "id": "F013",
+      "theme": "reporting_visibility",
+      "evidence_quote": "filter dashboard results by region"
+    },
+    {
+      "id": "F014",
+      "theme": "reporting_visibility",
+      "evidence_quote": "charts explained what the trends mean"
+    },
+    {
+      "id": "F015",
+      "theme": "reporting_visibility",
+      "evidence_quote": "compare first-response times across teams"
+    },
+    {
+      "id": "F016",
+      "theme": "billing_confusion",
+      "evidence_quote": "invoice shows an add-on we did not recognize"
+    },
+    {
+      "id": "F017",
+      "theme": "billing_confusion",
+      "evidence_quote": "explains how our seat count affects the next bill"
+    },
+    {
+      "id": "F018",
+      "theme": "billing_confusion",
+      "evidence_quote": "fails to explain the overage charges"
+    },
+    {
+      "id": "F019",
+      "theme": "billing_confusion",
+      "evidence_quote": "The notice should show the charge before renewal"
+    },
+    {
+      "id": "F020",
+      "theme": "billing_confusion",
+      "evidence_quote": "see taxes and discounts separately"
+    },
+    {
+      "id": "F021",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM contacts added yesterday are still missing"
+    },
+    {
+      "id": "F022",
+      "theme": "integration_sync",
+      "evidence_quote": "duplicates accounts every time we reconnect it"
+    },
+    {
+      "id": "F023",
+      "theme": "integration_sync",
+      "evidence_quote": "Calendar appointments have stopped syncing"
+    },
+    {
+      "id": "F024",
+      "theme": "integration_sync",
+      "evidence_quote": "Data from our CRM arrives with yesterday’s owner assignments"
+    },
+    {
+      "id": "F025",
+      "theme": "integration_sync",
+      "evidence_quote": "failing intermittently with no actionable retry message"
+    },
+    {
+      "id": "F026",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the Save button sits below the screen edge"
+    },
+    {
+      "id": "F027",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "The mobile text is too small"
+    },
+    {
+      "id": "F028",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "screen readers cannot tell which field is required"
+    },
+    {
+      "id": "F029",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "ticket list freezes when I turn on large text"
+    },
+    {
+      "id": "F030",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "Keyboard navigation through the mobile web form skips the attachment button entirely"
+    }
+  ],
+  "insights": [
+    {
+      "theme": "onboarding_setup",
+      "summary": "Initial setup feedback points to unclear sequencing and guidance, invitation-link expiry, and setup progress/settings that may not persist.",
+      "feedback_ids": [
+        "F001",
+        "F002",
+        "F003",
+        "F004",
+        "F005"
+      ],
+      "pm_recommendation": "Test clearer step ordering and role/permission guidance, a next-action welcome screen, and persistence/resume behavior; review invitation-link expiry handling with admins."
+    },
+    {
+      "theme": "notification_noise",
+      "summary": "Feedback describes overlapping email and push alerts, repeated or post-resolution reminders, and limited control over notification priority or channel.",
+      "feedback_ids": [
+        "F006",
+        "F007",
+        "F008",
+        "F009",
+        "F010"
+      ],
+      "pm_recommendation": "Prototype per-channel preferences, priority muting, digest options, and suppression of reminders after resolution; validate preferences and reminder rules with users."
+    },
+    {
+      "theme": "reporting_visibility",
+      "summary": "Users report difficulty finding reports and exports, accessing useful breakdowns/filters, interpreting charts, and comparing team metrics.",
+      "feedback_ids": [
+        "F011",
+        "F012",
+        "F013",
+        "F014",
+        "F015"
+      ],
+      "pm_recommendation": "Test report navigation and export discoverability alongside category/region filters, chart explanations, and cross-team comparison workflows."
+    },
+    {
+      "theme": "billing_confusion",
+      "summary": "Billing statements and notices are described as lacking clear detail about add-ons, seat-count effects, overages, renewal charges, taxes, or discounts.",
+      "feedback_ids": [
+        "F016",
+        "F017",
+        "F018",
+        "F019",
+        "F020"
+      ],
+      "pm_recommendation": "Evaluate invoice line-item clarity and pre-renewal notices that explain seat counts, overages, add-ons, taxes, discounts, and expected charges."
+    },
+    {
+      "theme": "integration_sync",
+      "summary": "Integration feedback describes missing, duplicated, stale, or stopped data, alongside limited error visibility and retry guidance.",
+      "feedback_ids": [
+        "F021",
+        "F022",
+        "F023",
+        "F024",
+        "F025"
+      ],
+      "pm_recommendation": "Investigate sync freshness and reconnect behavior; test user-facing status/error details and actionable retry guidance, while validating duplicate prevention."
+    },
+    {
+      "theme": "mobile_accessibility",
+      "summary": "Mobile feedback identifies screen-layout constraints and accessibility issues involving text size, screen-reader field cues, large-text stability, and keyboard navigation.",
+      "feedback_ids": [
+        "F026",
+        "F027",
+        "F028",
+        "F029",
+        "F030"
+      ],
+      "pm_recommendation": "Run mobile accessibility checks across viewport sizes, large-text settings, screen readers, and keyboard paths; validate fixes with users relying on these features."
+    }
+  ]
+}
