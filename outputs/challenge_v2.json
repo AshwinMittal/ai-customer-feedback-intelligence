@@ -1,0 +1,227 @@
+{
+  "classifications": [
+    {
+      "id": "C101",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM contacts are still missing after last night’s sync"
+    },
+    {
+      "id": "C102",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the final Create Workspace button is hidden by the keyboard and cannot be tapped"
+    },
+    {
+      "id": "C103",
+      "theme": "integration_sync",
+      "evidence_quote": "yesterday’s CRM ownership assignments instead of the latest ones after sync"
+    },
+    {
+      "id": "C104",
+      "theme": "notification_noise",
+      "evidence_quote": "nobody receives a critical incident alert"
+    },
+    {
+      "id": "C105",
+      "theme": "onboarding_setup",
+      "evidence_quote": "add single sign-on with our identity provider for agent accounts"
+    },
+    {
+      "id": "C106",
+      "theme": "notification_noise",
+      "evidence_quote": "four identical email alerts"
+    },
+    {
+      "id": "C107",
+      "theme": "billing_confusion",
+      "evidence_quote": "Our latest invoice never arrived"
+    },
+    {
+      "id": "C108",
+      "theme": "billing_confusion",
+      "evidence_quote": "Seat charges differ from the numbers in the CRM"
+    },
+    {
+      "id": "C109",
+      "theme": "reporting_visibility",
+      "evidence_quote": "I cannot filter the charts by ticket owner"
+    },
+    {
+      "id": "C110",
+      "theme": "reporting_visibility",
+      "evidence_quote": "It feels much cleaner than last month"
+    },
+    {
+      "id": "C111",
+      "theme": "integration_sync",
+      "evidence_quote": "Calendar appointments stopped flowing into our support tool"
+    },
+    {
+      "id": "C112",
+      "theme": "reporting_visibility",
+      "evidence_quote": "mishears technical product names in recordings"
+    },
+    {
+      "id": "C113",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the support ticket editor clips off the submit button at larger text sizes"
+    },
+    {
+      "id": "C114",
+      "theme": "onboarding_setup",
+      "evidence_quote": "cannot understand which account settings must be completed before inviting agents"
+    },
+    {
+      "id": "C115",
+      "theme": "billing_confusion",
+      "evidence_quote": "hides the taxes and add-on charges"
+    },
+    {
+      "id": "C116",
+      "theme": "notification_noise",
+      "evidence_quote": "five separate activity alerts for one ticket reassignment"
+    },
+    {
+      "id": "C117",
+      "theme": "reporting_visibility",
+      "evidence_quote": "cannot be exported after filtering by region"
+    },
+    {
+      "id": "C118",
+      "theme": "reporting_visibility",
+      "evidence_quote": "exclude test tickets from resolution-time charts"
+    },
+    {
+      "id": "C119",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM contacts have stopped syncing"
+    },
+    {
+      "id": "C120",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "offer dark mode across the whole product"
+    },
+    {
+      "id": "C121",
+      "theme": "reporting_visibility",
+      "evidence_quote": "The agent queue takes twelve seconds to load"
+    },
+    {
+      "id": "C122",
+      "theme": "integration_sync",
+      "evidence_quote": "the HRIS integration timed out during sync"
+    },
+    {
+      "id": "C123",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the required fields are not announced before billing checkout"
+    },
+    {
+      "id": "C124",
+      "theme": "notification_noise",
+      "evidence_quote": "duplicate copies of the invoice every night"
+    },
+    {
+      "id": "C125",
+      "theme": "reporting_visibility",
+      "evidence_quote": "the charts do not define their time windows"
+    },
+    {
+      "id": "C126",
+      "theme": "billing_confusion",
+      "evidence_quote": "does not explain the additional cost per seat"
+    },
+    {
+      "id": "C127",
+      "theme": "onboarding_setup",
+      "evidence_quote": "the first-run checklist skips permissions setup"
+    },
+    {
+      "id": "C128",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM priority values arrive a day late"
+    },
+    {
+      "id": "C129",
+      "theme": "onboarding_setup",
+      "evidence_quote": "it is still not enabled for our tenant"
+    },
+    {
+      "id": "C130",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the error message is never announced after I submit a reply"
+    }
+  ],
+  "insights": [
+    {
+      "theme": "reporting_visibility",
+      "summary": "Customers describe difficulty interpreting dashboard information, filtering charts, excluding irrelevant records, exporting filtered reports, and understanding chart time windows. Some feedback also concerns queue loading performance and transcription accuracy, which are adjacent but distinct usability concerns.",
+      "feedback_ids": [
+        "C109",
+        "C117",
+        "C118",
+        "C125",
+        "C112",
+        "C121"
+      ],
+      "pm_recommendation": "Validate a reporting usability improvement initiative through interviews and usability tests. Test clearer chart definitions, configurable filters, exclusion rules, and reliable exports. Separately investigate queue performance and transcription accuracy to determine whether they warrant distinct initiatives."
+    },
+    {
+      "theme": "integration_sync",
+      "summary": "Customers report missing, stale, or delayed external data, along with sync interruptions and limited recovery options. CRM contacts, CRM ownership assignments, calendar appointments, HRIS invitations, and CRM priority values are specifically mentioned.",
+      "feedback_ids": [
+        "C101",
+        "C103",
+        "C111",
+        "C119",
+        "C122",
+        "C128"
+      ],
+      "pm_recommendation": "Test an integration reliability initiative focused on sync observability, data freshness indicators, retry controls, and reconciliation of missing or stale records. Validate the proposed capabilities against the specific integration scenarios described in the feedback."
+    },
+    {
+      "theme": "mobile_accessibility",
+      "summary": "Customers report mobile usability and accessibility barriers involving hidden or clipped controls, larger text sizes, screen reader announcements, and readability preferences. Several statements explicitly describe problems with screen reader support.",
+      "feedback_ids": [
+        "C102",
+        "C113",
+        "C120",
+        "C123",
+        "C130"
+      ],
+      "pm_recommendation": "Conduct accessibility testing across mobile browsers and assistive technologies. Test keyboard overlap, text scaling, form field announcements, submission error announcements, and dark mode. Prioritize issues that prevent users from completing essential workflows."
+    },
+    {
+      "theme": "notification_noise",
+      "summary": "Customers describe notification problems involving duplicate messages, multiple alerts for one event, repeated invoice emails, and missing critical incident alerts. The feedback indicates both excessive notifications and gaps in critical notification delivery.",
+      "feedback_ids": [
+        "C104",
+        "C106",
+        "C116",
+        "C124"
+      ],
+      "pm_recommendation": "Test configurable notification preferences, event deduplication, and channel-level controls. In parallel, validate critical alert delivery and escalation behavior through incident simulations. Ensure that reducing routine alert volume does not suppress critical notifications."
+    },
+    {
+      "theme": "billing_confusion",
+      "summary": "Customers report missing invoices, bundled charges without tax or add-on detail, unclear per-seat pricing, and uncertainty about discrepancies between seat charges and CRM figures. One statement explicitly identifies uncertainty between billing rules and data synchronization.",
+      "feedback_ids": [
+        "C107",
+        "C108",
+        "C115",
+        "C126"
+      ],
+      "pm_recommendation": "Test a more transparent billing experience with itemized invoices, explicit tax and add-on breakdowns, clear per-seat pricing, and explanations of billing rules. Validate whether these changes improve customers' ability to understand their charges."
+    },
+    {
+      "theme": "onboarding_setup",
+      "summary": "Customers describe account setup and access configuration needs, including uncertainty about prerequisites for inviting agents, missing permissions guidance in the first-run checklist, and a request for single sign-on. Another customer reports that a beta feature expected for their tenant remains unavailable.",
+      "feedback_ids": [
+        "C105",
+        "C114",
+        "C127",
+        "C129"
+      ],
+      "pm_recommendation": "Test a guided setup experience that clearly identifies required configuration steps, permissions, and invitation prerequisites. Validate enterprise access requirements such as single sign-on separately, and investigate tenant-level beta enablement expectations."
+    }
+  ]
+}

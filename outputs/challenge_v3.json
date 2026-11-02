@@ -1,0 +1,210 @@
+{
+  "classifications": [
+    {
+      "id": "C101",
+      "theme": "integration_sync",
+      "evidence_quote": "contacts are still missing after last night’s sync"
+    },
+    {
+      "id": "C102",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the final Create Workspace button is hidden by the keyboard"
+    },
+    {
+      "id": "C103",
+      "theme": "integration_sync",
+      "evidence_quote": "yesterday’s CRM ownership assignments instead of the latest ones after sync"
+    },
+    {
+      "id": "C104",
+      "theme": "needs_review",
+      "evidence_quote": "nobody receives a critical incident alert"
+    },
+    {
+      "id": "C105",
+      "theme": "needs_review",
+      "evidence_quote": "add single sign-on with our identity provider"
+    },
+    {
+      "id": "C106",
+      "theme": "notification_noise",
+      "evidence_quote": "four identical email alerts"
+    },
+    {
+      "id": "C107",
+      "theme": "needs_review",
+      "evidence_quote": "Neither is the main issue"
+    },
+    {
+      "id": "C108",
+      "theme": "needs_review",
+      "evidence_quote": "cannot tell whether billing rules or data sync are to blame"
+    },
+    {
+      "id": "C109",
+      "theme": "reporting_visibility",
+      "evidence_quote": "dashboard totals are confusing and I cannot filter the charts by ticket owner"
+    },
+    {
+      "id": "C110",
+      "theme": "needs_review",
+      "evidence_quote": "Love the refreshed navigation"
+    },
+    {
+      "id": "C111",
+      "theme": "integration_sync",
+      "evidence_quote": "appointments stopped flowing into our support tool"
+    },
+    {
+      "id": "C112",
+      "theme": "needs_review",
+      "evidence_quote": "mishears technical product names in recordings"
+    },
+    {
+      "id": "C113",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "clips off the submit button at larger text sizes"
+    },
+    {
+      "id": "C114",
+      "theme": "onboarding_setup",
+      "evidence_quote": "cannot understand which account settings must be completed before inviting agents"
+    },
+    {
+      "id": "C115",
+      "theme": "billing_confusion",
+      "evidence_quote": "hides the taxes and add-on charges"
+    },
+    {
+      "id": "C116",
+      "theme": "notification_noise",
+      "evidence_quote": "five separate activity alerts for one ticket reassignment"
+    },
+    {
+      "id": "C117",
+      "theme": "reporting_visibility",
+      "evidence_quote": "cannot be exported after filtering by region"
+    },
+    {
+      "id": "C118",
+      "theme": "reporting_visibility",
+      "evidence_quote": "exclude test tickets from resolution-time charts"
+    },
+    {
+      "id": "C119",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM contacts have stopped syncing"
+    },
+    {
+      "id": "C120",
+      "theme": "needs_review",
+      "evidence_quote": "offer dark mode across the whole product"
+    },
+    {
+      "id": "C121",
+      "theme": "needs_review",
+      "evidence_quote": "takes twelve seconds to load during our Monday rush"
+    },
+    {
+      "id": "C122",
+      "theme": "integration_sync",
+      "evidence_quote": "HRIS integration timed out during sync"
+    },
+    {
+      "id": "C123",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the required fields are not announced before billing checkout"
+    },
+    {
+      "id": "C124",
+      "theme": "notification_noise",
+      "evidence_quote": "duplicate copies of the invoice every night"
+    },
+    {
+      "id": "C125",
+      "theme": "reporting_visibility",
+      "evidence_quote": "charts do not define their time windows"
+    },
+    {
+      "id": "C126",
+      "theme": "billing_confusion",
+      "evidence_quote": "does not explain the additional cost per seat"
+    },
+    {
+      "id": "C127",
+      "theme": "onboarding_setup",
+      "evidence_quote": "first-run checklist skips permissions setup"
+    },
+    {
+      "id": "C128",
+      "theme": "integration_sync",
+      "evidence_quote": "CRM priority values arrive a day late"
+    },
+    {
+      "id": "C129",
+      "theme": "needs_review",
+      "evidence_quote": "beta feature last week but it is still not enabled for our tenant"
+    },
+    {
+      "id": "C130",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "the error message is never announced after I submit a reply"
+    }
+  ],
+  "insights": [
+    {
+      "theme": "integration_sync",
+      "summary": "Several reports describe missing, delayed, timed-out, or stale records across CRM, calendar, and HRIS synchronization.",
+      "feedback_ids": [
+        "C101",
+        "C103",
+        "C111",
+        "C119",
+        "C122",
+        "C128"
+      ],
+      "pm_recommendation": "Hypothesis: investigate connector freshness and failure observability, and consider surfacing record-level sync status and retry paths."
+    },
+    {
+      "theme": "mobile_accessibility",
+      "summary": "Mobile interaction and assistive-technology barriers recur, including obscured/clipped controls and unannounced fields or errors.",
+      "feedback_ids": [
+        "C102",
+        "C113",
+        "C123",
+        "C130"
+      ],
+      "pm_recommendation": "Hypothesis: audit key mobile flows across keyboard layouts, larger text, and screen readers; add accessibility regression tests."
+    },
+    {
+      "theme": "reporting_visibility",
+      "summary": "Reporting feedback repeatedly points to difficulty filtering, exporting, excluding data, or interpreting chart definitions.",
+      "feedback_ids": [
+        "C109",
+        "C117",
+        "C118",
+        "C125"
+      ],
+      "pm_recommendation": "Hypothesis: evaluate clearer chart metadata and consistent filter/export behavior, including test-ticket exclusion."
+    },
+    {
+      "theme": "notification_noise",
+      "summary": "Users describe duplicate or excessive routine notifications, including invitation, reassignment, and invoice emails.",
+      "feedback_ids": [
+        "C106",
+        "C116",
+        "C124"
+      ],
+      "pm_recommendation": "Hypothesis: investigate event deduplication and user controls for routine notification channels and frequency."
+    },
+    {
+      "theme": "onboarding_setup",
+      "summary": "New admins report unclear prerequisites and incomplete first-run guidance around settings, invitations, and permissions.",
+      "feedback_ids": [
+        "C114",
+        "C127"
+      ],
+      "pm_recommendation": "Hypothesis: test a sequenced setup checklist that makes required settings and permissions explicit before invitations."
+    }
+  ]
+}
