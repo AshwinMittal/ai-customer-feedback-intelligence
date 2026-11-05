@@ -1,63 +1,104 @@
-# AI Customer Feedback Intelligence | PM Portfolio Project 01
+# AI Customer Feedback Intelligence
 
-> Independent learning prototype for PM interviews using **synthetic data**. No proprietary customer information. No production, revenue, or efficiency claims.
+**Project 01 | Independent AI Product Management Portfolio | Synthetic data**
 
-## Business problem
-An imaginary B2B support SaaS PM needs a repeatable, explainable way to group product feedback and identify actionable opportunities.
+> **Status:** Learning prototype and offline evaluation completed. Not deployed, not tested on real customer data, and not production-ready. The proposed insights dashboard and operational review queue are product designs, not implemented software.
 
-## What this repo demonstrates
-- Product framing and MVP decisions
-- LLM prompt design and version comparisons
-- Human-labeled reference data (gold labels)
-- Offline evaluation of classification and evidence fidelity
-- Human review and explicit limitations
+## The problem
 
-## Tools
-Python 3.11+ (standard library only), ChatGPT (manual prompt run), VS Code (optional), Git/GitHub. No OpenAI API key or paid packages needed.
+Product teams receive feedback from support tickets, interviews, and customer-success channels but struggle to turn raw comments into consistently categorized, evidence-backed product insights. Manual analysis is time-consuming and can be inconsistent. A language model might help, but a persuasive summary does not guarantee a reliable classification or trustworthy evidence.
 
-## Quick start
+## The solution explored
 
-```bash
-python --version
-python -m unittest discover -s tests -v
-python src/build_prompt.py --version v1 > generated_prompt_v1.txt
+An offline, human-in-the-loop feedback analysis prototype that:
+
+1. Sends **synthetic** customer feedback through a manually operated LLM prompt workflow.
+2. Classifies comments into six defined product themes, with an explicit `needs_review` option for ambiguous or out-of-scope feedback.
+3. Requests source quotes and feedback IDs for traceability.
+4. Compares outputs against authored reference labels, then audits evidence and insight-output contracts separately.
+5. Recommends a **proposed** UX: show five prioritized insights, let users expand to additional themes, and maintain a distinct review/exception workflow.
+
+## What I contributed and learned
+
+As an independent portfolio exercise, I defined the problem and success criteria, compared prompt and policy options, executed the manual ChatGPT runs, evaluated outputs with Python, analyzed failure cases, and made a product design decision to balance usability with full theme access. The starter scripts and sample data were AI-assisted learning materials. This is an **independent prototype**, not a production AI program at a prior employer.
+
+## Results at a glance
+
+| Evaluation | Version | Correct classifications | Review recall | Other findings |
+|---|---|---:|---:|---|
+| Challenge, 30 synthetic records | v1 | 20/30 (66.7%) | 0/9 | Nine forced-fit review errors |
+| Challenge, 30 synthetic records | v2 | 21/30 (70.0%) | 0/9 | Nine forced-fit review errors |
+| Challenge, 30 synthetic records | v3 | 30/30 (100%) | 9/9 | Added explicit `needs_review` policy |
+| Curated holdout, 36 synthetic records | v3 | 36/36 (100%) | 12/12 | 1 invalid exact quote; 6 insights exceeded limit of 5 |
+| Curated holdout, 36 synthetic records | v4 | 36/36 (100%) | 12/12 | 1 invalid exact quote; 5 insights omitted one active theme |
+
+**Key interpretation:** v3 on the challenge altered the allowed category policy as well as prompt text, so its improvement is **not evidence of prompt engineering alone**. On a separate curated holdout, v3 and v4 used the same seven-label taxonomy and achieved identical classification accuracy. Neither holdout run fully complied with every output requirement. The 36-item data set is synthetic, small, and author-labeled; no deployment-readiness or commercial-benefit claim follows from these numbers.
+
+## Architecture
+
+```text
+Synthetic CSV feedback -> prompt builder -> manual ChatGPT run -> JSON result
+                                                     |
+                                 +-------------------+-------------------+
+                                 |                                       |
+                        Classification evaluator                  Output QA audit
+                        (reference labels, IDs)                  (quotes, count, coverage)
+                                 |                                       |
+                                 +-------------------+-------------------+
+                                                     |
+                                   PM interpretation and decision log
+                                                     |
+                             Proposed insight UI + human review process
+                             (designed, not implemented)
 ```
 
-1. Open `generated_prompt_v1.txt` and paste its entire contents into **a new ChatGPT conversation**.
-2. Copy the assistant's plain JSON response, without ``` fences, into `outputs/run_01.json`.
-3. Evaluate using:
+[Architecture and workflow](docs/ARCHITECTURE.md) | [Evaluation report](docs/EVALUATION_REPORT.md) | [Product decisions](docs/PRODUCT_DECISIONS.md) | [Case study](docs/CASE_STUDY.md) | [Interview Q&A](docs/INTERVIEW_QA.md) | [Limitations](docs/LIMITATIONS_AND_NEXT_STEPS.md) | [GitHub publication guide for macOS](docs/GIT_PUBLISHING_MAC.md)
 
-```bash
-python src/evaluate.py --input outputs/run_01.json --report outputs/eval_01.json
+## Repository map
+
+```text
+data/                 Original 30-record synthetic benchmark, reference labels, taxonomy
+prompts/              Initial prompt versions
+src/                  Initial prompt builder and evaluator
+challenge_lab/        Difficult-case dataset, review category, prompt v3, evaluator
+holdout_lab/          36-record holdout, concise prompt v4, audit script and tests
+outputs/              User-generated model responses, evaluator reports and quality audit
+tests/                Evaluator unit tests
+docs/                 Product brief, decisions, evaluation, case study and interview prep
 ```
 
-4. Read the errors in the report. Compare against `data/gold_labels.csv` (do **not** paste the labels into the classification prompt).
-5. Run `python src/build_prompt.py --version v2 > generated_prompt_v2.txt`, repeat in a new ChatGPT conversation, save `outputs/run_02.json`, evaluate and compare.
-6. Read `docs/LEARNING_LOG.md` and document what changed, what the evaluation measured, and what it could **not** detect.
+## Quick start on macOS
 
-On macOS or Linux, use `python3` instead of `python` if needed.
+From this repository root:
 
-## Repo guide
-- `data/feedback.csv`: 30 synthetic customer comments.
-- `data/gold_labels.csv`: manual reference classifications. Keep separate from model input.
-- `data/TAXONOMY.md`: valid labels and scope.
-- `prompts/v1.md`, `prompts/v2.md`: baseline and evidence-first prompt versions.
-- `src/build_prompt.py`: construct a complete copy/paste prompt.
-- `src/evaluate.py`: deterministic validation and scoring.
-- `tests/`: basic evaluator tests.
-- `docs/PRODUCT_BRIEF.md`: PM problem, scope, success measures, trade-offs.
-- `docs/LEARNING_LOG.md`: decision and learning log.
-- `docs/INTERVIEW_STORY.md`: honest portfolio story template.
+```bash
+python3 --version
+python3 -m unittest discover -s tests -v
+python3 -m unittest discover -s challenge_lab/tests -v
+python3 -m unittest discover -s holdout_lab/tests -v
 
-## Evaluation caveat
-An exact quote provides mechanical traceability, not proof that a recommendation is semantically supported. A balanced synthetic dataset is not a production test set. Human interpretation and a separate realism check are necessary.
+python3 holdout_lab/evaluate.py --input outputs/holdout_v3.json --report outputs/holdout_eval_v3.json
+python3 holdout_lab/evaluate.py --input outputs/holdout_v4.json --report outputs/holdout_eval_v4.json
 
-## Next improvements (intentionally not implemented in v1)
-- Additional independent reviewer labels and disagreement analysis.
-- Multi-label classification and review queues.
-- AI run repeatability and latency/cost measurement via an API.
-- User-facing dashboard (Streamlit or simple HTML).
-- Deployment and governance design for real customer data.
+python3 holdout_lab/audit_outputs.py \
+  --feedback holdout_lab/data/holdout_feedback.csv \
+  --v3 outputs/holdout_v3.json \
+  --v4 outputs/holdout_v4.json \
+  --out outputs/holdout_quality_audit.json
+```
 
-## GitHub publication
-This repository is safe to publish because it contains synthetic examples. Do not push confidential employer/customer records, private API keys, `.env`, or real interview transcripts. See the companion workshop instructions in ChatGPT for `git` and `gh` commands.
+The commands assume the holdout raw response files already exist in `outputs/`. If not, see `holdout_lab/README.md` to generate and save them. Running an evaluator does **not** call an LLM; it scores saved outputs. No API key or paid model access is needed for these tests.
+
+## Privacy and reproducibility
+
+All project data is synthetic. Reference labels were kept out of the submitted classification prompts, but are part of the public repo so evaluation can be reproduced. Do not upload real client data, credentials, private employer records, or model conversations containing confidential material.
+
+Manual ChatGPT runs are **not fully reproducible** because the model configuration, response variability, latency, and token costs were not recorded via an API. Future work should capture those variables and use more representative, independently labeled feedback.
+
+## What this project does not demonstrate
+
+It does not demonstrate shipped AI products, production ML systems, a deployed feedback dashboard, real customer productivity savings, enterprise security approvals, live online A/B tests, or reliability under real-world data drift.
+
+## Publishing
+
+If you have already initialized Git and made the first commit, **do not reinitialize Git**. Follow [the macOS Git instructions](docs/GIT_PUBLISHING_MAC.md) to review, stage, commit, and push the new work.
