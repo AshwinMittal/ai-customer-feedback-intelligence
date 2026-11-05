@@ -1,0 +1,51 @@
+{
+  "total_records": 36,
+  "overall_accuracy": 1.0,
+  "non_review_classification_accuracy": 1.0,
+  "gold_review_cases": 12,
+  "predicted_review_cases": 12,
+  "review_recall": 1.0,
+  "review_precision": 1.0,
+  "forced_fit_errors": [],
+  "unnecessary_review_ids": [],
+  "missing_ids": [],
+  "extra_ids": [],
+  "duplicate_ids": [],
+  "unknown_theme_ids": [],
+  "unsupported_or_missing_quotes": [
+    "H216"
+  ],
+  "insights_with_invalid_or_missing_citations": [],
+  "per_theme": {
+    "billing_confusion": {
+      "total": 4,
+      "correct": 4
+    },
+    "integration_sync": {
+      "total": 4,
+      "correct": 4
+    },
+    "mobile_accessibility": {
+      "total": 4,
+      "correct": 4
+    },
+    "needs_review": {
+      "total": 12,
+      "correct": 12
+    },
+    "notification_noise": {
+      "total": 4,
+      "correct": 4
+    },
+    "onboarding_setup": {
+      "total": 4,
+      "correct": 4
+    },
+    "reporting_visibility": {
+      "total": 4,
+      "correct": 4
+    }
+  },
+  "caveats": "Synthetic annotated benchmark; gold is an adjudicated reference, not absolute truth. Substring checks cannot judge semantic support of insights. Changing prompt and allowed taxonomy at once is a product-policy change, not an isolated prompt A/B test.",
+  "note": "Curated synthetic holdout, not representative of real customer traffic. Both prompts use the same seven-theme taxonomy. Gold labels are authored, not independently adjudicated."
+}

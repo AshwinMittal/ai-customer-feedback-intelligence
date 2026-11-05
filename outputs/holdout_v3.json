@@ -1,0 +1,252 @@
+{
+  "classifications": [
+    {
+      "id": "H201",
+      "theme": "onboarding_setup",
+      "evidence_quote": "admins cannot locate the invite teammates step"
+    },
+    {
+      "id": "H202",
+      "theme": "onboarding_setup",
+      "evidence_quote": "the timezone selector is hidden until after the workspace is saved"
+    },
+    {
+      "id": "H203",
+      "theme": "onboarding_setup",
+      "evidence_quote": "cannot complete the invite teammates wizard; it loops back to workspace creation"
+    },
+    {
+      "id": "H204",
+      "theme": "onboarding_setup",
+      "evidence_quote": "setup checklist never explains which connector to enable first during launch"
+    },
+    {
+      "id": "H205",
+      "theme": "notification_noise",
+      "evidence_quote": "agents get three emails and two push alerts about the same change"
+    },
+    {
+      "id": "H206",
+      "theme": "notification_noise",
+      "evidence_quote": "get a digest instead of immediate emails for low-priority comments"
+    },
+    {
+      "id": "H207",
+      "theme": "notification_noise",
+      "evidence_quote": "daily reminder is being sent hourly and our team cannot turn it off"
+    },
+    {
+      "id": "H208",
+      "theme": "notification_noise",
+      "evidence_quote": "repetitive sync completed notifications overwhelm agents"
+    },
+    {
+      "id": "H209",
+      "theme": "reporting_visibility",
+      "evidence_quote": "CSV export hides resolved cases even when the filter includes them"
+    },
+    {
+      "id": "H210",
+      "theme": "reporting_visibility",
+      "evidence_quote": "cannot find the breakdown by queue in the reporting interface"
+    },
+    {
+      "id": "H211",
+      "theme": "reporting_visibility",
+      "evidence_quote": "date filter resets whenever the report is reopened"
+    },
+    {
+      "id": "H212",
+      "theme": "reporting_visibility",
+      "evidence_quote": "chart does not explain whether it uses local time or UTC"
+    },
+    {
+      "id": "H213",
+      "theme": "billing_confusion",
+      "evidence_quote": "invoice lists seat overages without naming which agents triggered those charges"
+    },
+    {
+      "id": "H214",
+      "theme": "billing_confusion",
+      "evidence_quote": "renewal quote differs from our annual plan total and we cannot get an itemized explanation"
+    },
+    {
+      "id": "H215",
+      "theme": "billing_confusion",
+      "evidence_quote": "charges continued; is the invoice prorated?"
+    },
+    {
+      "id": "H216",
+      "theme": "billing_confusion",
+      "evidence_quote": "what does platform adjustment mean on our invoice, and why was the price changed?"
+    },
+    {
+      "id": "H217",
+      "theme": "integration_sync",
+      "evidence_quote": "old case history is duplicated across contact records"
+    },
+    {
+      "id": "H218",
+      "theme": "integration_sync",
+      "evidence_quote": "support console still shows yesterday's value until manual refresh"
+    },
+    {
+      "id": "H219",
+      "theme": "integration_sync",
+      "evidence_quote": "several new tickets never arrive in the third-party system"
+    },
+    {
+      "id": "H220",
+      "theme": "integration_sync",
+      "evidence_quote": "Our webhook duplicates contacts when retried"
+    },
+    {
+      "id": "H221",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "VoiceOver on iPhone reads the close button as an unlabeled control"
+    },
+    {
+      "id": "H222",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "needs horizontal scrolling and hides the action buttons on smaller phones"
+    },
+    {
+      "id": "H223",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "mobile keyboard covers the Send button"
+    },
+    {
+      "id": "H224",
+      "theme": "mobile_accessibility",
+      "evidence_quote": "screen-reader focus order skips the ticket summary card"
+    },
+    {
+      "id": "H225",
+      "theme": "needs_review",
+      "evidence_quote": "the queue view is finally readable and quick to scan"
+    },
+    {
+      "id": "H226",
+      "theme": "needs_review",
+      "evidence_quote": "login one-time code fails every morning"
+    },
+    {
+      "id": "H227",
+      "theme": "needs_review",
+      "evidence_quote": "cannot tell whether filters are wrong or the records are missing"
+    },
+    {
+      "id": "H228",
+      "theme": "needs_review",
+      "evidence_quote": "Critical outage alerts did not fire"
+    },
+    {
+      "id": "H229",
+      "theme": "needs_review",
+      "evidence_quote": "Please add a dark mode option"
+    },
+    {
+      "id": "H230",
+      "theme": "needs_review",
+      "evidence_quote": "All screens became very slow after last week's update"
+    },
+    {
+      "id": "H231",
+      "theme": "needs_review",
+      "evidence_quote": "I cannot tell which problem blocks rollout most"
+    },
+    {
+      "id": "H232",
+      "theme": "needs_review",
+      "evidence_quote": "We need an approvals workflow"
+    },
+    {
+      "id": "H233",
+      "theme": "needs_review",
+      "evidence_quote": "cannot tell if the device is offline or the connector is stalled"
+    },
+    {
+      "id": "H234",
+      "theme": "needs_review",
+      "evidence_quote": "complete audit log of every admin action, with one-click export"
+    },
+    {
+      "id": "H235",
+      "theme": "needs_review",
+      "evidence_quote": "I do not know if search, reporting filters, or sync is responsible"
+    },
+    {
+      "id": "H236",
+      "theme": "needs_review",
+      "evidence_quote": "Please support Korean-language localization"
+    }
+  ],
+  "insights": [
+    {
+      "theme": "onboarding_setup",
+      "summary": "Setup and invitation flow issues include hard-to-find invitation steps, a hidden timezone selector, a looping invitation wizard, and unclear connector launch guidance.",
+      "feedback_ids": [
+        "H201",
+        "H202",
+        "H203",
+        "H204"
+      ],
+      "pm_recommendation": "Hypothesis: evaluate a guided setup checklist that surfaces invitation and configuration steps in sequence, then test whether admins can complete setup without support."
+    },
+    {
+      "theme": "notification_noise",
+      "summary": "Routine notifications are duplicative, too frequent, immediate when a digest is preferred, or difficult to disable.",
+      "feedback_ids": [
+        "H205",
+        "H206",
+        "H207",
+        "H208"
+      ],
+      "pm_recommendation": "Hypothesis: investigate per-event controls, digest options, and frequency/disable settings for routine notifications."
+    },
+    {
+      "theme": "reporting_visibility",
+      "summary": "Reporting usability gaps involve export/filter mismatch, hard-to-find queue breakdowns, reset date filters, and unclear chart timezone interpretation.",
+      "feedback_ids": [
+        "H209",
+        "H210",
+        "H211",
+        "H212"
+      ],
+      "pm_recommendation": "Hypothesis: test persistent report filters, clearer navigation to breakdowns, export consistency, and explicit timezone labels."
+    },
+    {
+      "theme": "billing_confusion",
+      "summary": "Invoices and renewal pricing lack clear itemization, agent attribution for seat overages, prorating explanation, or definitions for adjustments.",
+      "feedback_ids": [
+        "H213",
+        "H214",
+        "H215",
+        "H216"
+      ],
+      "pm_recommendation": "Hypothesis: assess an itemized invoice view with seat-level attribution, prorating details, and plain-language charge definitions."
+    },
+    {
+      "theme": "integration_sync",
+      "summary": "Connector-related feedback describes duplicated CRM history or contacts, stale values, and webhook delivery gaps despite reported retry success.",
+      "feedback_ids": [
+        "H217",
+        "H218",
+        "H219",
+        "H220"
+      ],
+      "pm_recommendation": "Hypothesis: investigate deduplication, freshness indicators/manual refresh behavior, and end-to-end webhook delivery verification."
+    },
+    {
+      "theme": "mobile_accessibility",
+      "summary": "Mobile experiences have screen-reader labeling/focus issues and constrained layouts that hide controls or let the keyboard cover actions.",
+      "feedback_ids": [
+        "H221",
+        "H222",
+        "H223",
+        "H224"
+      ],
+      "pm_recommendation": "Hypothesis: run mobile accessibility and responsive-layout audits, then validate fixes with assistive technology and smaller-screen devices."
+    }
+  ]
+}
